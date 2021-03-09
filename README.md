@@ -1,6 +1,8 @@
-# svelte-nodegui-starter
+# svelte-nodegui-wasm-starter
 
-**Clone and run for a quick way to see Svelte NodeGui in action.**
+**Clone and run for a quick way to see Svelte NodeGui + WASM in action.**
+
+This is a fork of the [svelte-nodegui-starter](https://github.com/nodegui/svelte-nodegui-starter) repo with the addition of using WASM.  Note, this currently breaks hot reloading.
 
 <img alt="logo" src="https://github.com/nodegui/svelte-nodegui-starter/raw/master/assets/demo.png" height="500" />
 
@@ -10,13 +12,18 @@ To clone and run this repository you'll need [Git](https://git-scm.com) and [Nod
 
 Make sure you have met the requirements listed here: https://docs.nodegui.org/#/tutorial/development-environment
 
+Install [wasm-pack](https://rustwasm.github.io/wasm-pack/installer/)
+
 From your command line:
 
 ```bash
 # Clone this repository
 git clone https://github.com/nodegui/svelte-nodegui-starter
-# Go into the repository
-cd svelte-nodegui-starter
+# Go into the project's crate directory
+cd svelte-nodegui-wasm-starter/crate
+wasm-pack build
+# Go into the project root directory
+cd ../
 # Install dependencies
 npm install
 # Build the app in development mode (unminified; watch mode on)
