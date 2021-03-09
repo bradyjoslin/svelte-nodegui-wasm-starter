@@ -18,7 +18,7 @@ From your command line:
 
 ```bash
 # Create a copy of this repository (or just clone)
-npx degit bradyjoslin/svelte-nodegui-wasm-starter my-app
+npx degit bradyjoslin/svelte-nodegui-wasm-starter#main my-app
 # Go into the project's crate directory
 cd my-app/crate
 wasm-pack build
