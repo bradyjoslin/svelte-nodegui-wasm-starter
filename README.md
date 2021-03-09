@@ -2,7 +2,7 @@
 
 **Clone and run for a quick way to see Svelte NodeGui + Wasm in action.**
 
-This is a fork of the [svelte-nodegui-starter](https://github.com/nodegui/svelte-nodegui-starter) repo with the addition of using WASM with Rust.  Note, this currently breaks hot reloading.
+This is a fork of the [svelte-nodegui-starter](https://github.com/nodegui/svelte-nodegui-starter) repo with the addition of using Wasm with Rust.  Note, this currently breaks hot reloading.
 
 <img alt="logo" src="https://raw.githubusercontent.com/bradyjoslin/svelte-nodegui-wasm-starter/main/assets/demo.png" height="500" />
 
