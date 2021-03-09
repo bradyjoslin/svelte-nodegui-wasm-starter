@@ -7,7 +7,7 @@
     import type { NSVElement, RNWindow } from "@nodegui/svelte-nodegui";
     import * as wasm from '../crate/pkg'
 
-    let hi = wasm.greet("Svelte NodeGUI + WASM");
+    let hi = wasm.greet("Svelte NodeGUI + Wasm");
 
     const winIcon = new QIcon(nodeguiIcon);
 

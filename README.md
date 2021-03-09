@@ -1,6 +1,6 @@
 # svelte-nodegui-wasm-starter
 
-**Clone and run for a quick way to see Svelte NodeGui + WASM in action.**
+**Clone and run for a quick way to see Svelte NodeGui + Wasm in action.**
 
 This is a fork of the [svelte-nodegui-starter](https://github.com/nodegui/svelte-nodegui-starter) repo with the addition of using WASM with Rust.  Note, this currently breaks hot reloading.
 
@@ -17,8 +17,8 @@ Additionally, you'll need to have [Rust](https://www.rust-lang.org/) and [wasm-p
 From your command line:
 
 ```bash
-# Clone this repository
-git clone https://github.com/bradyjoslin/svelte-nodegui-wasm-starter/
+# Create a copy of this repository (or just clone)
+npx degit https://github.com/bradyjoslin/svelte-nodegui-wasm-starter/
 # Go into the project's crate directory
 cd svelte-nodegui-wasm-starter/crate
 wasm-pack build
@@ -30,6 +30,39 @@ npm install
 npm run dev
 # (From another terminal) Run the built app
 npm run start
+```
+
+## Wasm Interaction
+
+A greet function is exposed in `crate/src/lib.rs`, which takes a string as an argument:
+
+```rust
+#[wasm_bindgen]
+pub fn greet(name: &str) -> String {
+    format!("Welcome to {} 🐕", name)
+}
+```
+
+The Wasm package is imported, the greet function is called, and the result is rendered to the screen in `src/App.svelte`
+
+```js
+// ...
+
+import * as wasm from '../crate/pkg'
+
+let hi = wasm.greet("Svelte NodeGUI + WASM");
+
+// ...
+
+    <view style="flex: 1;">
+        <text id="welcome-text">{hi}</text>
+        <text id="step-1">1. Play around</text>
+        <StepOne />
+        <text id="step-2">2. Debug</text>
+        <StepTwo />
+    </view>
+
+// ...
 ```
 
 ## Resources for Learning NodeGui
