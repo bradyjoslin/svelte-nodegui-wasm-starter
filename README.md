@@ -4,7 +4,7 @@
 
 This is a fork of the [svelte-nodegui-starter](https://github.com/nodegui/svelte-nodegui-starter) repo with the addition of using WASM with Rust.  Note, this currently breaks hot reloading.
 
-<img alt="logo" src="https://github.com/bradyjoslin/svelte-nodegui-wasm-starter/raw/master/assets/demo.png" height="500" />
+<img alt="logo" src="https://raw.githubusercontent.com/bradyjoslin/svelte-nodegui-wasm-starter/main/assets/demo.png" height="500" />
 
 ## To Use
 
